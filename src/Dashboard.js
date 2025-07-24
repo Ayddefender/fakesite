@@ -1,10 +1,12 @@
 import React from 'react'
 
-export default function Dashboard({ session }) {
+function Dashboard() {
   return (
     <div>
-      <h2>Welcome to FakeGPT Dashboard</h2>
-      <p>You are logged in as {session.user.email}</p>
+      <h2>Dashboard</h2>
+      <p>You are now logged in!</p>
     </div>
   )
 }
+
+export default Dashboard
