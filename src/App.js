@@ -1,17 +1,17 @@
 import React from 'react'
+import ReactDOM from 'react-dom/client'
 import Login from './Login'
 import Dashboard from './Dashboard'
 
-export default function App() {
-  const [session, setSession] = React.useState(null)
-
+function App() {
   return (
     <div>
-      {session ? (
-        <Dashboard session={session} />
-      ) : (
-        <Login onLogin={setSession} />
-      )}
+      <h1>FakeGPT</h1>
+      <Login />
+      <Dashboard />
     </div>
   )
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App />)
